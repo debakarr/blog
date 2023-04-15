@@ -1,0 +1,4 @@
+baseURL = 'http://debakarr.github.io/'
+languageCode = 'en-us'
+title = "Debakar Roy"
+theme = "LoveIt"
