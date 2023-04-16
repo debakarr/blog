@@ -273,7 +273,7 @@ MediaWiki = ""
 Plume = ""
 HackTheBox = ""
 RootMe = ""
-Email = ""
+Email = "debakar.roy@outlook.com"
 Phone = ""
 RSS = ""
 
@@ -658,7 +658,7 @@ identifier = "resume"
 pre = ""
 post = ""
 name = "Resume"
-url = "https://rxresu.me/r/0VAJveKz"
+url = "/resume/debakar_roy_resume.pdf"
 title = "Resume"
 [[menu.main]]
 weight = 5
