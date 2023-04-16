@@ -4,6 +4,8 @@ date: 2023-04-16T09:51:30+05:30
 author: Debakar Roy
 authorLink: https://github.com/debakarr
 draft: false
+tags: ["DevOps", "Docker", "Kubernetes", "Git", "Jenkins", "CI/CD", "Monitoring", "Automation", "Tutorial", "How-to"]
+categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 ---
 
 {{< admonition type=info title="Planned Content" open=false >}}
