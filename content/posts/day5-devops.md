@@ -4,6 +4,8 @@ date: 2023-04-21T13:23:45+05:30
 draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
+tags: ["DevOps", "Best-Practice", "GitHub Documentation", "Tutorial", "How-to"] 
+categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 ---
 
 {{< admonition type=info title="Planned Content" open=false >}}
