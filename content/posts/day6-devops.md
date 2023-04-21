@@ -1,13 +1,10 @@
 ---
-title: "Day 3: Introduction to Continuous Integration (CI) and Continuous Deployment (CD)"
-date: 2023-04-18T21:11:28+05:30
+title: "Day 6: Introduction to Git"
+date: 2023-04-21T15:24:16+05:30
 draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
-tags: ["DevOps", "Docker", "Kubernetes", "Jenkins", "CI/CD", "Monitoring", "Automation", "Tutorial", "How-to"] 
-categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 ---
-
 
 {{< admonition type=info title="Planned Content" open=false >}}
 
@@ -15,13 +12,13 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 
 *   Day 1: Understanding DevOps, its principles, and benefits
 *   Day 2: Exploring the DevOps lifecycle and its stages
-*   **Day 3: Introduction to Continuous Integration (CI) and Continuous Deployment (CD)**
+*   Day 3: Introduction to Continuous Integration (CI) and Continuous Deployment (CD)
 *   Day 4: Familiarizing with common DevOps tools and technologies
 *   Day 5: Studying DevOps culture and best practices
 
 **Part 2: Version Control Systems**
 
-*   Day 6: Introduction to Git
+*   **Day 6: Introduction to Git**
 *   Day 7: Basic Git commands (`git init`, `git add`, `git commit`, `git status`)
 *   Day 8: Branching and merging in Git
 *   Day 9: Remote repositories and collaboration with Git
@@ -97,15 +94,15 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 
 Resource I refered:
 
-*   ![favicon-docs.gitlab.com](https://www.google.com/s2/favicons?domain=docs.gitlab.com)[CI/CD concepts | GitLab](https://docs.gitlab.com/ee/ci/introduction/)
-*   ![favicon-resources.github.com](https://www.google.com/s2/favicons?domain=resources.github.com)[Continuous Integration and Continuous Delivery (CI/CD) Fundamentals ...](https://resources.github.com/ci-cd/)
-*   ![favicon-github.blog](https://www.google.com/s2/favicons?domain=github.blog)[A beginner’s guide to CI/CD and automation on GitHub](https://github.blog/2022-06-03-a-beginners-guide-to-ci-cd-and-automation-on-github/)
+*   ![favicon-learn.microsoft.com](https://www.google.com/s2/favicons?domain=learn.microsoft.com)[Introduction to Git - Training | Microsoft Learn](https://learn.microsoft.com/en-us/training/modules/intro-to-git/)
+*   ![favicon-git-scm.com](https://www.google.com/s2/favicons?domain=git-scm.com)[Git - gittutorial Documentation](https://git-scm.com/docs/gittutorial)
+*   ![favicon-www.atlassian.com](https://www.google.com/s2/favicons?domain=www.atlassian.com)[Learn Git - Tutorials, Workflows and Commands | Atlassian](https://www.atlassian.com/git)
 
 
 ---
 
-{{< youtube scEDHsr3APg >}}
+{{< youtube USjZcfj8yxE >}}
 
 ---
 
-{{< youtube 42UP1fxi2SY >}}
+{{< youtube hwP7WQkmECE >}}

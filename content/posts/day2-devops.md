@@ -92,6 +92,8 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 
 {{< /admonition >}}
 
+---
+
 Resource I refered:
 
 ![favicon-www.simform.com](https://www.google.com/s2/favicons?domain=www.simform.com)[DevOps Lifecycle: 7 Phases Explained in Detail with Examples - Simform](https://www.simform.com/blog/devops-lifecycle/)

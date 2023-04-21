@@ -1,13 +1,10 @@
 ---
-title: "Day 3: Introduction to Continuous Integration (CI) and Continuous Deployment (CD)"
-date: 2023-04-18T21:11:28+05:30
+title: "Day 4: Familiarizing with common DevOps tools and technologies"
+date: 2023-04-19T08:10:41+05:30
 draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
-tags: ["DevOps", "Docker", "Kubernetes", "Jenkins", "CI/CD", "Monitoring", "Automation", "Tutorial", "How-to"] 
-categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 ---
-
 
 {{< admonition type=info title="Planned Content" open=false >}}
 
@@ -15,8 +12,8 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 
 *   Day 1: Understanding DevOps, its principles, and benefits
 *   Day 2: Exploring the DevOps lifecycle and its stages
-*   **Day 3: Introduction to Continuous Integration (CI) and Continuous Deployment (CD)**
-*   Day 4: Familiarizing with common DevOps tools and technologies
+*   Day 3: Introduction to Continuous Integration (CI) and Continuous Deployment (CD)
+*   **Day 4: Familiarizing with common DevOps tools and technologies**
 *   Day 5: Studying DevOps culture and best practices
 
 **Part 2: Version Control Systems**
@@ -97,15 +94,9 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 
 Resource I refered:
 
-*   ![favicon-docs.gitlab.com](https://www.google.com/s2/favicons?domain=docs.gitlab.com)[CI/CD concepts | GitLab](https://docs.gitlab.com/ee/ci/introduction/)
-*   ![favicon-resources.github.com](https://www.google.com/s2/favicons?domain=resources.github.com)[Continuous Integration and Continuous Delivery (CI/CD) Fundamentals ...](https://resources.github.com/ci-cd/)
-*   ![favicon-github.blog](https://www.google.com/s2/favicons?domain=github.blog)[A beginner’s guide to CI/CD and automation on GitHub](https://github.blog/2022-06-03-a-beginners-guide-to-ci-cd-and-automation-on-github/)
-
+*   ![favicon-awesome-devops.xyz](https://www.google.com/s2/favicons?domain=awesome-devops.xyz)[Awesome DevOps](http://awesome-devops.xyz/)
+*   ![favicon-www.smartsheet.com](https://www.google.com/s2/favicons?domain=www.smartsheet.com)[The Tools and Technology of DevOps | Smartsheet](https://www.smartsheet.com/devops-tools)
 
 ---
 
-{{< youtube scEDHsr3APg >}}
-
----
-
-{{< youtube 42UP1fxi2SY >}}
+{{< youtube 4It0D0Nw00c >}}

@@ -92,6 +92,8 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 
 {{< /admonition >}}
 
+---
+
 Despite holding a full-time job, I am currently dedicating time to document my learning in DevOps in a structured manner. While I have gained significant practical experience in DevOps through my daily responsibilities, I have not yet had the opportunity to systematically document my learnings.
 
 Through this series, my aim is to create comprehensive and organized notes that I can reference in the future. I plan to collect various resources available online and supplement them with my own insights and summaries.
