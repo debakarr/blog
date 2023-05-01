@@ -12,7 +12,7 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 
 **Part 1: Introduction to DevOps**
 
-*   **Day 1: Understanding DevOps, its principles, and benefits**
+*   **[Day 1: Understanding DevOps, its principles, and benefits](/posts/devops/day1-devops)**
 *   Day 2: Exploring the DevOps lifecycle and its stages
 *   Day 3: Introduction to Continuous Integration (CI) and Continuous Deployment (CD)
 *   Day 4: Familiarizing with common DevOps tools and technologies

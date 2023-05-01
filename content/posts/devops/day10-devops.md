@@ -1,11 +1,11 @@
 ---
-title: "Day 5: Studying DevOps culture and best practices"
-date: 2023-04-21T13:23:45+05:30
+title: "Day 10: Git workflows and best practices"
+date: 2023-04-27T13:40:15+05:30
 draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
-tags: ["DevOps", "Best-Practice", "GitHub Documentation", "Tutorial", "How-to"] 
-categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
+tags: ["DevOps", "Git", "GitHub", "Tutorial", "How-to", "GitHub", "Remote Repository"] 
+categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "Git"]
 ---
 
 {{< admonition type=info title="Planned Content" open=false >}}
@@ -16,15 +16,15 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 *   [Day 2: Exploring the DevOps lifecycle and its stages](/posts/devops/day2-devops)
 *   [Day 3: Introduction to Continuous Integration (CI) and Continuous Deployment (CD)](/posts/devops/day3-devops)
 *   [Day 4: Familiarizing with common DevOps tools and technologies](/posts/devops/day4-devops)
-*   **[Day 5: Studying DevOps culture and best practices](/posts/devops/day5-devops)**
+*   [Day 5: Studying DevOps culture and best practices](/posts/devops/day5-devops)
 
 **Part 2: Version Control Systems**
 
-*   Day 6: Introduction to Git
-*   Day 7: Basic Git commands (`git init`, `git add`, `git commit`, `git status`)
-*   Day 8: Branching and merging in Git
-*   Day 9: Remote repositories and collaboration with Git
-*   Day 10: Git workflows and best practices
+*   [Day 6: Introduction to Git](/posts/devops/day6-devops)
+*   [Day 7: Basic Git commands (`git init`, `git add`, `git commit`, `git status`)](/posts/devops/day7-devops)
+*   [Day 8: Branching and merging in Git](/posts/devops/day8-devops)
+*   [Day 9: Remote repositories and collaboration with Git](/posts/devops/day9-devops)
+*   **[Day 10: Git workflows and best practices](/posts/devops/day10-devops)**
 
 **Part 3: Continuous Integration and Continuous Deployment (CI/CD)**
 
@@ -96,8 +96,11 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 
 Resource I refered:
 
-*   ![favicon-gist.github.com](https://www.google.com/s2/favicons?domain=gist.github.com)[Devops Best Practices Checklist · GitHub](https://gist.github.com/jpswade/4135841363e72ece8086146bd7bb5d91)
-*   ![favicon-github.com](https://www.google.com/s2/favicons?domain=github.com)[bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises)
-*   ![favicon-github.com](https://www.google.com/s2/favicons?domain=github.com)[codeaprendiz/learn-devops](https://github.com/codeaprendiz/learn-devops)
-*   ![favicon-github.com](https://www.google.com/s2/favicons?domain=github.com)[AdamPaternostro/DevOps-Best-Practices](https://github.com/AdamPaternostro/DevOps-Best-Practices)
-*   ![favicon-github.com](https://www.google.com/s2/favicons?domain=github.com)[Tikam02/DevOps-Guide](https://github.com/Tikam02/DevOps-Guide)
+*   ![favicon-gist.github.com](https://www.google.com/s2/favicons?domain=gist.github.com)[GitHub Standard Fork & Pull Request Workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962)
+*   ![favicon-www.atlassian.com](https://www.google.com/s2/favicons?domain=www.atlassian.com)[Git Workflow | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/comparing-workflows)
+*   ![favicon-docs.github.com](https://www.google.com/s2/favicons?domain=docs.github.com)[GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow)
+
+Some more resources which I found helpful:
+
+*   ![favicon-www.github.com](https://www.google.com/s2/favicons?domain=www.github.com)[A list of cool features of Git and GitHub](https://github.com/tiimgreen/github-cheat-sheet)
+*   ![favicon-www.dev.to](https://www.google.com/s2/favicons?domain=www.dev.to)[Git: Cheat Sheet (advanced)](https://dev.to/maxpou/git-cheat-sheet-advanced-3a17)

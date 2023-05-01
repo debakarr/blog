@@ -12,17 +12,17 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 
 **Part 1: Introduction to DevOps**
 
-*   Day 1: Understanding DevOps, its principles, and benefits
-*   Day 2: Exploring the DevOps lifecycle and its stages
-*   Day 3: Introduction to Continuous Integration (CI) and Continuous Deployment (CD)
-*   Day 4: Familiarizing with common DevOps tools and technologies
-*   Day 5: Studying DevOps culture and best practices
+*   [Day 1: Understanding DevOps, its principles, and benefits](/posts/devops/day1-devops)
+*   [Day 2: Exploring the DevOps lifecycle and its stages](/posts/devops/day2-devops)
+*   [Day 3: Introduction to Continuous Integration (CI) and Continuous Deployment (CD)](/posts/devops/day3-devops)
+*   [Day 4: Familiarizing with common DevOps tools and technologies](/posts/devops/day4-devops)
+*   [Day 5: Studying DevOps culture and best practices](/posts/devops/day5-devops)
 
 **Part 2: Version Control Systems**
 
-*   Day 6: Introduction to Git
-*   Day 7: Basic Git commands (`git init`, `git add`, `git commit`, `git status`)
-*   **Day 8: Branching and merging in Git**
+*   [Day 6: Introduction to Git](/posts/devops/day6-devops)
+*   [Day 7: Basic Git commands (`git init`, `git add`, `git commit`, `git status`)](/posts/devops/day7-devops)
+*   **[Day 8: Branching and merging in Git](/posts/devops/day8-devops)**
 *   Day 9: Remote repositories and collaboration with Git
 *   Day 10: Git workflows and best practices
 
