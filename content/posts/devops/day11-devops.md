@@ -5,10 +5,10 @@ draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
 tags: ["DevOps", "CI/CD", "Jenkins", "Tutorial", "CircleCI", "GitHub Actions", "Travis CI"] 
-categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "Git"]
+categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "Jenkins"]
 ---
 
-{{< admonition type=info title="Planned Content" open=false >}}
+{{< admonition type=info title="Content" open=false >}}
 
 **Part 1: Introduction to DevOps**
 

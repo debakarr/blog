@@ -9,7 +9,7 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 ---
 
 
-{{< admonition type=info title="Planned Content" open=false >}}
+{{< admonition type=info title="Content" open=false >}}
 
 **Part 1: Introduction to DevOps**
 

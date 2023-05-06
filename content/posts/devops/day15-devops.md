@@ -1,38 +1,38 @@
 ---
-title: "Day 5: Studying DevOps culture and best practices"
-date: 2023-04-21T13:23:45+05:30
+title: "Day 15: Jenkins - Pipelines and best practices"
+date: 2023-05-03T10:29:46+05:30
 draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
-tags: ["DevOps", "Best-Practice", "GitHub Documentation", "Tutorial", "How-to"] 
-categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
+tags: ["DevOps", "CI/CD", "Jenkins", "Tutorial", "Best Practices"] 
+categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "Jenkins"]
 ---
 
 {{< admonition type=info title="Content" open=false >}}
 
 **Part 1: Introduction to DevOps**
 
-*   [Day 1: Understanding DevOps, its principles, and benefits](/posts/devops/day1-devops)
+*   [Day 1: Understanding DevOps, its principles, and benefits](day1-devops)
 *   [Day 2: Exploring the DevOps lifecycle and its stages](/posts/devops/day2-devops)
 *   [Day 3: Introduction to Continuous Integration (CI) and Continuous Deployment (CD)](/posts/devops/day3-devops)
 *   [Day 4: Familiarizing with common DevOps tools and technologies](/posts/devops/day4-devops)
-*   **[Day 5: Studying DevOps culture and best practices](/posts/devops/day5-devops)**
+*   [Day 5: Studying DevOps culture and best practices](/posts/devops/day5-devops)
 
 **Part 2: Version Control Systems**
 
-*   Day 6: Introduction to Git
-*   Day 7: Basic Git commands (`git init`, `git add`, `git commit`, `git status`)
-*   Day 8: Branching and merging in Git
-*   Day 9: Remote repositories and collaboration with Git
-*   Day 10: Git workflows and best practices
+*   [Day 6: Introduction to Git](/posts/devops/day6-devops)
+*   [Day 7: Basic Git commands (`git init`, `git add`, `git commit`, `git status`)](/posts/devops/day7-devops)
+*   [Day 8: Branching and merging in Git](/posts/devops/day8-devops)
+*   [Day 9: Remote repositories and collaboration with Git](/posts/devops/day9-devops)
+*   [Day 10: Git workflows and best practices](/posts/devops/day10-devops)
 
 **Part 3: Continuous Integration and Continuous Deployment (CI/CD)**
 
-*   Day 11: Introduction to CI/CD
-*   Day 12: Jenkins - Installation and configuration
-*   Day 13: Jenkins - Creating and managing jobs
-*   Day 14: Jenkins - Integrating with Git
-*   Day 15: Jenkins - Pipelines and best practices
+*   [Day 11: Introduction to CI/CD](/posts/devops/day11-devops)
+*   [Day 12: Jenkins - Installation and configuration](/posts/devops/day12-devops)
+*   [Day 13: Jenkins - Creating and managing jobs](/posts/devops/day13-devops)
+*   [Day 14: Jenkins - Integrating with Git](/posts/devops/day14-devops)
+*   **[Day 15: Jenkins - Pipelines and best practices](/posts/devops/day15-devops)**
 
 **Part 4: Configuration Management**
 
@@ -94,10 +94,8 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure"]
 
 ---
 
-Resource I refered:
+Some good resource for best practice in Jenkins:
 
-*   ![favicon-gist.github.com](https://www.google.com/s2/favicons?domain=gist.github.com)[Devops Best Practices Checklist · GitHub](https://gist.github.com/jpswade/4135841363e72ece8086146bd7bb5d91)
-*   ![favicon-github.com](https://www.google.com/s2/favicons?domain=github.com)[bregman-arie/devops-exercises](https://github.com/bregman-arie/devops-exercises)
-*   ![favicon-github.com](https://www.google.com/s2/favicons?domain=github.com)[codeaprendiz/learn-devops](https://github.com/codeaprendiz/learn-devops)
-*   ![favicon-github.com](https://www.google.com/s2/favicons?domain=github.com)[AdamPaternostro/DevOps-Best-Practices](https://github.com/AdamPaternostro/DevOps-Best-Practices)
-*   ![favicon-github.com](https://www.google.com/s2/favicons?domain=github.com)[Tikam02/DevOps-Guide](https://github.com/Tikam02/DevOps-Guide)
+*   ![favicon-github.com](https://www.google.com/s2/favicons?domain=github.com)[New Best Practices for Jenkins Pipeline Global Shared Libraries](https://github.com/aimtheory/jenkins-pipeline-best-practices)
+*   ![favicon-www.jenkins.io](https://www.google.com/s2/favicons?domain=www.jenkins.io)[Pipeline Best Practices](https://www.jenkins.io/doc/book/pipeline/pipeline-best-practices/)
+*   ![favicon-www.cloudbees.com](https://www.google.com/s2/favicons?domain=www.cloudbees.com)[Top 10 Best Practices for Jenkins Pipeline Plugin](https://www.cloudbees.com/blog/top-10-best-practices-jenkins-pipeline-plugin)
