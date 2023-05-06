@@ -12,7 +12,7 @@ categories: ["Programming", "Web Development", "API"]
 
 
 
-![](http://webstar.company/wp-content/uploads/2014/02/glassfish_logo1.png)
+![](https://upload.wikimedia.org/wikipedia/en/thumb/8/85/GlassFish_logo.svg/1200px-GlassFish_logo.svg.png)
 
 <hr><br />
 This post will guide you through a series of steps you will need to create a Restful API for a simple book database using Jersey (an implementation of JAX-RS specification). The resultant API will be able to fetch all the books or book wih their specific ID, add a new book, update a book by its ID, remove a book from database and run queries to search for book(s) according to subject ID or title. Also, if the image is too small for you to see the details clearly, please do open it in a new tab. Also for the time being the codes are not commented properly. I will provide the full source code which is commented properly in coming future.
