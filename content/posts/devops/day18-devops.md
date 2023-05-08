@@ -1,7 +1,7 @@
 ---
-title: "Day 17: Ansible - Installation and configuration"
-date: 2023-05-05T12:31:09+05:30
-draft: false
+title: "Day18 Devops"
+date: 2023-05-06T16:01:51+05:30
+draft: true 
 author: Debakar Roy
 authorLink: https://github.com/debakarr
 tags: ["DevOps", "CI/CD", "Jenkins", "Tutorial", "Ansible"] 
@@ -37,8 +37,8 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 **Part 4: Configuration Management**
 
 *   [Day 16: Introduction to configuration management](/posts/devops/day16-devops)
-*   **[Day 17: Ansible - Installation and configuration](/posts/devops/day17-devops)**
-*   Day 18: Ansible - Ad-hoc commands and playbooks
+*   [Day 17: Ansible - Installation and configuration](/posts/devops/day17-devops)
+*   **[Day 18: Ansible - Ad-hoc commands and playbook](/posts/devops/day18-devops)**
 *   Day 19: Ansible - Roles and best practices
 *   Day 20: Puppet and Chef - Overview and comparison
 
@@ -93,76 +93,3 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 {{< /admonition >}}
 
 ---
-
-Ansible can only be installed in Linux system. Although we can connect Windows machine in Ansible inventory.
-
-### Update System
-
-#### Debian-Based System (Ubuntu, Debian)
-
-```console
-sudo apt-get update
-sudo apt-get-upgrade
-```
-
-#### RHEL-Based system (CentOS, RGEL, Fedora)"
-If you are using RHEL-Based system then the command will be 
-
-```console
-sudo yum update
-```
-
-### Install Python
-
-#### Debian-Based System (Ubuntu, Debian)
-
-```console
-sudo apt-get install python3
-```
-
-#### RHEL-Based system (CentOS, RGEL, Fedora)"
-If you are using RHEL-Based system then the command will be 
-
-```console
-sudo yum install python3
-```
-
-### Install Ansible
-
-#### Debian-Based System (Ubuntu, Debian)
-
-```console
-sudo apt-get install ansible
-```
-
-#### RHEL-Based system (CentOS, RGEL, Fedora)"
-If you are using RHEL-Based system then the command will be 
-
-```console
-sudo yum install ansible
-```
-
-### Verify the version
-
-```console
-ansible --version
-```
-
-### Configure Ansible
-
-Generally we will be modifying `/etc/ansible/ansible.cfg` file change/update any Ansible configuration.
-We can also add inventory file in `/etc/ansible` location. To start with we can add a file name hosts in the `/etc/ansible` folder. Content of the file may look something like this:
-
-```yaml
-[webserver]
-192.168.1.0
-196.168.1.11
-```
-
-And then update the `/etc/ansible/ansible.cfg` file:
-
-```ini
-inventory = /etc/ansible/hosts
-```
-
-Now ansible is installed and ready to use.
