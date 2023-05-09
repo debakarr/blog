@@ -1,10 +1,10 @@
 ---
-title: "Day18 Devops"
+title: "Day18: Ansible - Ad-hoc commands and playbooks"
 date: 2023-05-06T16:01:51+05:30
-draft: true 
+draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
-tags: ["DevOps", "CI/CD", "Jenkins", "Tutorial", "Ansible"] 
+tags: ["DevOps", "CI/CD", "Jenkins", "Tutorial", "Ansible", "Playbook", "Ad-hoc command"]
 categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "Ansible"]
 ---
 
@@ -93,3 +93,128 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 {{< /admonition >}}
 
 ---
+
+
+## Introduction:
+Ansible is a powerful automation tool that simplifies complex tasks in IT environments. In this blog post, we will explore Ansible ad-hoc commands and playbooks. Ad-hoc commands are a quick way to execute simple tasks on remote hosts, while playbooks allow you to create reusable and more complex automation workflows.
+
+## Setup
+
+I had setup 1 Ubuntu ansible controller and 3 Debian ansible host machine.
+
+![](https://i.imgur.com/SPBcnvv.png)
+
+### Ansible Ad-hoc commands
+
+Ad-hoc commands are a great way to perform quick tasks on your remote hosts without the need for a playbook. These commands are executed directly from the command line and are useful for simple tasks like checking the status of a service or creating a new user.
+
+---
+
+Here are some examples of Ansible ad-hoc commands:
+
+#### Check if linux host are reachable
+
+```console
+ansible linux-host -m ping
+```
+
+![](https://i.imgur.com/m0Nndbs.png)
+
+---
+
+#### Check uptime of all the linux host
+
+```console
+ansible linux-host -m command -a "uptime"
+```
+
+![](https://i.imgur.com/LIdBX0u.png)
+
+---
+
+#### Use `ansible/builtin.shell` module
+
+```console
+ansible linux-host -m ansible.builtin.shell -a 'echo $TERM'
+```
+
+![](https://i.imgur.com/vvGEDlR.png)
+
+---
+
+#### Use `ansible.builtin.copy` module
+
+```console
+ansible linux-host -m ansible.builtin.copy -a "src=/etc/hosts dest=/tmp/hosts"
+```
+
+![](https://i.imgur.com/udlo1Tl.png)
+
+---
+
+Keep in mind that ad-hoc commands are not suitable for complex tasks, and their usage should be limited to simple and quick tasks.
+
+---
+
+### Ansible Playbook
+
+Playbooks are the core of Ansible's automation capabilities. They are written in YAML and define a series of tasks to be executed on remote hosts. Playbooks can be easily shared, reused, and versioned, making them ideal for more complex tasks and workflows.
+
+Here's a simple example of an Ansible playbook that installs and configures the Apache web server on multiple Debian hosts under the "linux-host" group:
+
+```yaml
+---
+- name: Install and configure Apache on Debian hosts
+  hosts: linux-host
+  become: yes
+
+  tasks:
+    - name: Update package index
+      apt:
+        update_cache: yes
+
+    - name: Install Apache
+      apt:
+        name: apache2
+        state: present
+
+    - name: Start and enable Apache service
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+
+  handlers:
+    - name: Restart Apache
+      service:
+        name: apache2
+        state: restarted
+
+```
+
+![](https://i.imgur.com/N9kF0E7.png)
+
+In this playbook, we first update the package index on all hosts in the "linux-host" group. Then, we install the Apache web server using the apt module. Finally, we start and enable the Apache service, and create a handler to restart the service if any changes are made.
+
+To run this playbook, save it as apache_setup.yml and execute the following command:
+
+```console
+ansible-playbook apache_setup.yml
+```
+
+This playbook will install and configure the Apache web server on all Debian hosts in the "linux-host" group.
+
+---
+
+### Conclusion
+
+In this blog post, we have explored Ansible ad-hoc commands and playbooks. Ad-hoc commands are useful for quick and simple tasks, while playbooks provide a more powerful and reusable way to automate complex tasks and workflows.
+
+As you continue to learn and use Ansible, you'll find that these tools can greatly simplify your IT automation tasks and improve your overall workflow.
+
+---
+
+Few more resources one can read:
+*   ![favicon-docs.ansible.com](https://www.google.com/s2/favicons?domain=docs.ansible.com)[Introduction to ad hoc commands](https://docs.ansible.com/ansible/latest/command_guide/intro_adhoc.html)
+*   ![favicon-www.middlewareinventory.com](https://www.google.com/s2/favicons?domain=www.middlewareinventory.com)[CI/CD concepts](https://www.middlewareinventory.com/blog/ansible-ad-hoc-commands/)
+*   ![favicon-www.redhat.com](https://www.google.com/s2/favicons?domain=www.redhat.com)[How to install software packages with an Ansible playbook](https://www.redhat.com/sysadmin/software-packages-ansible)
