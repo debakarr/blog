@@ -4,8 +4,8 @@ date: 2023-05-09T10:43:39+05:30
 draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
-tags: ["DevOps", "CI/CD", "Jenkins", "Tutorial", "Ansible", "Chef", "Puppet", "Comparision"]
-categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "Ansible", "Best Pactice"]
+tags: ["DevOps", "CI/CD", "Jenkins", "Tutorial", "IaC", "Terraform"]
+categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "IaC"]
 ---
 
 {{< admonition type=info title="Content" open=false >}}
