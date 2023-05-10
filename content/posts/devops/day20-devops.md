@@ -1,10 +1,10 @@
 ---
-title: "Day 19: Ansible - Roles and best practices"
-date: 2023-05-07T16:01:58+05:30
+title: "Day 20: Puppet and Chef - Overview and comparison"
+date: 2023-05-08T16:11:18+05:30
 draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
-tags: ["DevOps", "CI/CD", "Jenkins", "Tutorial", "Ansible", "Ansible-Galaxy", "Ansible Roles", "Best Pactice"]
+tags: ["DevOps", "CI/CD", "Jenkins", "Tutorial", "Ansible", "Chef", "Puppet", "Comparision"]
 categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "Ansible", "Best Pactice"]
 ---
 
@@ -39,8 +39,8 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 *   [Day 16: Introduction to configuration management](/posts/devops/day16-devops)
 *   [Day 17: Ansible - Installation and configuration](/posts/devops/day17-devops)
 *   [Day 18: Ansible - Ad-hoc commands and playbook](/posts/devops/day18-devops)
-*   **[Day 19: Ansible - Roles and best practices](/posts/devops/day19-devops)**
-*   Day 20: Puppet and Chef - Overview and comparison
+*   [Day 19: Ansible - Roles and best practices](/posts/devops/day19-devops)
+*   **[Day 20: Puppet and Chef - Overview and comparison](/posts/devops/day20-devops)**
 
 **Part 5: Infrastructure as Code**
 
@@ -94,59 +94,49 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 
 ---
 
-👋 In this blog post, we will explore Ansible roles, their benefits, and how to use them in your playbooks. We'll also discuss best practices for organizing and structuring your Ansible projects.
 
-### Ansible Roles: Basics and Creating
-
-Ansible roles provide a well-defined structure for organizing your tasks, variables, handlers, metadata, templates, and other files. They allow you to reuse and share your Ansible code efficiently across multiple projects without duplicating the code. This makes your projects more manageable and easier to maintain.
-
-A simple example of using roles in a playbook can be found in the official Ansible documentation:
-
-```yaml
----
-- hosts: webservers
-  roles:
-    - common
-    - webservers
-```
-
-In this example, the common and webservers roles are applied to the webservers group of hosts.
+Configuration management tools such as **Puppet** and **Chef** have become increasingly important in managing large-scale IT infrastructures. In this post, we will provide an overview of Puppet and Chef and compare their features and capabilities.
 
 ---
 
-### Sharing Roles with Ansible Galaxy
+## 🎭 Puppet
 
-Ansible Galaxy is a public repository for sharing and discovering Ansible roles created by the community. You can search and download roles that fit your use case, saving time and leveraging the expertise of other users.
+👉 **Puppet** is an open-source configuration management tool used for automating the deployment and management of software and system configurations. Puppet uses a **declarative language**, called **Puppet DSL**, to define and manage system configurations. This language allows users to specify the desired system state without having to write detailed scripts.
 
-For example, to install a PostgreSQL server role from Ansible Galaxy, you can run:
+Some of the key features of Puppet include:
 
-```console
-$ ansible-galaxy install geerlingguy.postgresql
-Starting galaxy role install process
-- downloading role 'postgresql', owned by geerlingguy
-- downloading role from https://github.com/geerlingguy/ansible-role-postgresql/archive/3.4.3.tar.gz
-- extracting geerlingguy.postgresql to /home/debakarr/.ansible/roles/geerlingguy.postgresql
-- geerlingguy.postgresql (3.4.3) was installed successfully
-```
-
-And then use it in a playbook:
-
-```yaml
----
-- hosts: linux-host
-  become: true
-  roles:
-    - role: geerlingguy.postgresql
-      vars:
-        postgresql_users:
-          - name: debakarr
-```
-
-![](https://i.imgur.com/JoaGuno.png)
+- **Idempotency**: Puppet ensures that the desired system state is maintained, even in the face of unexpected changes or errors.
+- **Agent-based architecture**: Puppet uses a client-server architecture, where the **agent** runs on each node and communicates with the **Puppet master** server to receive configuration updates.
+- **Resource abstraction**: Puppet abstracts system resources, such as files, services, and packages, into **resource types**, which can be easily managed through Puppet DSL.
 
 ---
 
-For best practices you can follow these resources:
-*   ![favicon-github.com](https://www.google.com/s2/favicons?domain=github.com)[Ansible Best Practices](https://github.com/jkupferer/ansible-best-practices)
-*   ![favicon-github.com](https://www.google.com/s2/favicons?domain=github.com)[Ansible Best practices](https://github.com/DemisR/ansible_best_practices_slides/)
-*   ![favicon-spacelift.io](https://www.google.com/s2/favicons?domain=spacelift.io)[Ansible Best Practices to Follow [Tips & Tricks]](https://spacelift.io/blog/ansible-best-practices)
+## 🍴 Chef
+
+👉 **Chef** is another popular open-source configuration management tool used for automating IT infrastructure. Chef uses a **Ruby-based DSL** to define and manage system configurations. This language allows users to write detailed scripts that define the desired system state.
+
+Some of the key features of Chef include:
+
+- **Flexibility**: Chef allows users to define and customize their own **cookbooks** and **recipes**, which can be easily shared and reused.
+- **Test-driven development**: Chef supports test-driven development practices through the use of **test-kitchen** and other testing tools.
+- **Container support**: Chef has strong support for **containers** and **microservices**, which makes it a good choice for managing modern IT environments.
+
+---
+
+## 🔍 Comparison
+
+Both Puppet and Chef have similar goals and features, but they differ in their approach and implementation. Here are some key differences between Puppet and Chef:
+
+- Puppet uses a **declarative language**, called **Puppet DSL**, while Chef uses a **Ruby-based DSL**.
+- Puppet has stronger support for **Windows** and **cloud platforms**, while Chef has stronger support for **containers** and **microservices**.
+- Puppet has a larger and more established **community**, while Chef has a more **flexible** and **customizable** architecture.
+
+In conclusion, both Puppet and Chef are powerful configuration management tools that can help automate and streamline IT infrastructure management. The choice between them depends on the specific needs and requirements of your organization.
+
+---
+
+There is a very nice comprehensive video going through some of the most used configuration management tool
+
+{{< youtube _TVNCTK808I >}}
+
+[Simplilearn](https://www.youtube.com/@SimplilearnOfficial) have other videos also discussing all of these tools in more details.
