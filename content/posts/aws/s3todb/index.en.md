@@ -317,6 +317,33 @@ Please note that you will have to modify it as per your account name and S3 buck
 
 {{< /admonition >}}
 
+```json
+{
+  "Version": "2012-10-17",
+  "Id": "JSONProcessingQueue-ID",
+  "Statement": [
+    {
+      "Sid": "JSONProcessingQueue-statement-ID",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "SQS:SendMessage",
+      "Resource": "arn:aws:sqs:us-east-1:CHANGE-WITH-YOUR-ACCOUNT-ID:JSONProcessingQueue",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "CHANGE-WITH-YOUR-ACCOUNT-ID"
+        },
+        "ArnLike": {
+          "aws:SourceArn": "arn:aws:s3:*:*:CHANGE-WITH-YOUR-BUCKET-NAME"
+        }
+      }
+    }
+  ]
+}
+
+```
+
 ![](create-queue/modify-access-policy.jpg)
 
 - Select the dead-letter queue we had created in the previous section.
