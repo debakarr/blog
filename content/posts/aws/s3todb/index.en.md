@@ -10,6 +10,38 @@ categories: ["DevOps", "AWS", "S3", "SQS", "Serverless", "Lambda"]
 
 This is going to be a walkthrough of one of the LAB I did in Udemy to build Serverless Workflow in AWS. The task of the LAB was to take any JSON file uploaded in S3 bucket and store the data from that in DynamoDB.
 
+![](serverless_workflow.png)
+
+
+{{< admonition type=info title="Source code for diagram" open=false >}}
+
+```python
+from diagrams import Cluster, Diagram
+from diagrams.aws.compute import Lambda
+from diagrams.aws.database import Dynamodb
+from diagrams.aws.integration import SQS
+from diagrams.aws.storage import S3
+
+with Diagram("Serverless Workflow", graph_attr={"margin": "-1"}, show=False):
+    with Cluster("Amazon S3"):
+        s3_bucket = S3("JSONFilesBucket")
+
+    with Cluster("AWS SQS"):
+        dlq = SQS("DeadLetterQueue")
+        json_processing_queue = SQS("JSONProcessingQueue")
+        json_processing_queue - dlq
+
+    with Cluster("AWS Lambda"):
+        lambda_function = Lambda("ProcessJSONFiles")
+
+    with Cluster("Amazon DynamoDB"):
+        dynamodb_table = Dynamodb("JSONItemTable")
+
+    s3_bucket >> json_processing_queue >> lambda_function >> dynamodb_table
+```
+
+{{< /admonition >}}
+
 Thing it covers:
 - Efficiently process AWS S3 events using AWS SQS Message Queues.
 - Trigger AWS Lambda Function to process the message in SQS queue.
