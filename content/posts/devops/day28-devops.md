@@ -1,11 +1,11 @@
 ---
-title: "Day28 Devops"
+title: "Day 28: Docker - Building and managing images"
 date: 2023-05-16T12:20:46+05:30
-draft: true
+draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
-tags: ["DevOps", "CI/CD", "IaC", "Terraform", "Alternatives"]
-categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "IaC", "Terraform", "Pulumi"]
+tags: ["DevOps", "CI/CD", "Containerization", "Docker"]
+categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "Containerization", "Docker"]
 ---
 
 {{< admonition type=info title="Content" open=false >}}
@@ -52,9 +52,9 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 
 **Part 6: Containerization**
 
-*   Day 26: Introduction to containerization
-*   Day 27: Docker - Installation and configuration
-*   Day 28: Docker - Building and managing images
+*   [Day 26: Introduction to containerization](/posts/devops/day26-devops)
+*   [Day 27: Docker - Installation and configuration](/posts/devops/day27-devops)
+*   **[Day 28: Docker - Building and managing images](/posts/devops/day28-devops)**
 *   Day 29: Docker - Running and managing containers
 *   Day 30: Docker Compose and best practices
 
@@ -91,3 +91,144 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 *   Day 50: Cloud security and compliance
 
 {{< /admonition >}}
+
+
+### Building docker image
+
+A Docker image is a lightweight, standalone, and executable software package that includes everything needed to run a piece of software, including the code, runtime, system tools, libraries, and system dependencies. These images are built based on instructions provided in a Dockerfile, which contains a set of commands and configurations.
+
+A Dockerfile might look something like this:
+
+```Dockerfile
+# This line specifies the base image for our Docker image. 
+# In this case, we're using the official Python 3.9-slim image as the starting point.
+FROM python:3.9-slim
+
+# This sets the working directory inside the container to /app. 
+# Any subsequent commands will be executed in this directory.
+WORKDIR /app
+
+# This copies the requirements.txt file from the host machine to the working directory of the container. 
+# This file should contain the necessary Python dependencies for your FastAPI application.
+COPY requirements.txt .
+
+# This command installs the Python dependencies specified in the requirements.txt file using pip.
+RUN pip install --no-cache-dir -r requirements.txt
+
+# This copies the entire application code from the host machine to the working directory of the container.
+COPY . .
+
+# This instruction exposes port 7400 to allow communication with the FastAPI application running inside the container.
+EXPOSE 7400
+
+# This sets the default command to be executed when the container starts. 
+# It uses the uvicorn server to run the FastAPI application specified in the main.py file, 
+# and binds it to the host's IP address 0.0.0.0 on port 7400.
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7400"]
+```
+
+Once you have this Dockerfile in your project directory, you can use the `docker build` command to build the Docker image. For example:
+
+```console
+docker build -t my-fastapi-app .
+```
+
+After successfully building the image, you can run a container using the image with the `docker run` command:
+
+```console
+docker run -p 7400:7400 my-fastapi-app
+```
+
+This will start the container and bind port 7400 of the container to port 7400 of the host machine, allowing you to access the FastAPI application at `http://localhost:7400`.
+
+### Managing Docker images
+
+Once you have built a Docker image, you can manage it efficiently using various Docker commands. Here are some essential Docker commands for image management:
+
+1. `docker tag`: The `docker tag` command allows you to add a new tag to an existing image. Tags are labels that provide a human-readable and meaningful name to an image, making it easier to reference and manage.
+2. `docker images`: This command lists all the Docker images present on your system along with their details such as the image ID, repository, tag, size, and creation date.
+3. `docker push`: Once you have built your image and want to share it with others, you can use the `docker push` command. It allows you to push your local image to a remote registry, making it accessible to others.
+4. `docker pull`: If you want to fetch an image from a remote registry, you can use the `docker pull` command. This command downloads the specified image from a registry like Docker Hub to your local machine.
+5. `docker rmi`: If you want to remove an existing image from your local machine, you can use the `docker rmi` command followed by the image ID or repository name. This command helps you clean up unused or outdated images.
+
+#### Example
+
+```console
+# To add the "latest" tag to the Python FastAPI application image, you can use
+$ docker tag my-fastapi-app my-fastapi-app:latest
+
+# This command lists all the Docker images present on your local machine. 
+# It displays the repository, tag, image ID, creation date, and size of each image.
+$ docker images
+REPOSITORY            TAG         IMAGE ID       CREATED       SIZE
+myjenkins-blueocean   2.387.3-1   3eb5689ff763   6 days ago    790MB
+my-fastapi-app        latest      67cdycd99743   2 hours ago   150MB
+docker                dind        85cdec499643   8 days ago    323MB
+postgres              latest      f14b0d96cff9   2 weeks ago   379MB
+vault                 latest      1fa9c3f0708d   4 weeks ago   186MB
+
+# This command fetches the latest version of the nginx image from the Docker Hub registry. 
+# It downloads the image to your local machine.
+$ docker pull nginx:latest
+latest: Pulling from library/nginx
+f03b40093957: Pull complete
+eed12bbd6494: Pull complete
+fa7eb8c8eee8: Pull complete
+7ff3b2b12318: Pull complete
+0f67c7de5f2c: Pull complete
+831f51541d38: Pull complete
+Digest: sha256:af296b188c7b7df99ba960ca614439c99cb7cf252ed7bbc23e90cfda59092305
+Status: Downloaded newer image for nginx:latest
+docker.io/library/nginx:latest
+
+# This command pushes a local Docker image to a remote registry, making it available for others to use. 
+# The output includes information about the pushed image, such as the digest and size.
+$ docker push debakarr/myjenkins-blueocean:latest
+The push refers to repository [docker.io/debakarr/myjenkins-blueocean]
+ebe100ea75f2: Pushed
+aa20ea415e9b: Pushed
+dd7368f0b1ad: Pushed
+6a2689aa4ed2: Pushed
+9dfe2887b847: Pushed
+ddabbb0c670a: Mounted from jenkins/jenkins
+e2cf45412e4b: Mounted from jenkins/jenkins
+12e639a5a7ea: Mounted from jenkins/jenkins
+ba66619e71de: Mounted from jenkins/jenkins
+d90c97aff719: Mounted from jenkins/jenkins
+67ac8a362561: Mounted from jenkins/jenkins
+6a45b66c291b: Mounted from jenkins/jenkins
+56b018284c58: Mounted from jenkins/jenkins
+7b8f9d0c670c: Mounted from jenkins/jenkins
+3811da883895: Mounted from jenkins/jenkins
+7de19ea2fded: Mounted from jenkins/jenkins
+3fb287e008f8: Mounted from jenkins/jenkins
+ae56c0c5405b: Mounted from jenkins/jenkins
+latest: digest: sha256:97ce065841e7e33ac746396a46c4ef5865a772c2bd5b5651aa96b83951148f00 size: 4092
+
+# This command removes a specified Docker image from your local machine. 
+# The output confirms the successful removal of the image.
+$ docker rmi nginx
+Untagged: nginx:latest
+Untagged: nginx@sha256:af296b188c7b7df99ba960ca614439c99cb7cf252ed7bbc23e90cfda59092305
+Deleted: sha256:f9c14fe76d502861ba0939bc3189e642c02e257f06f4c0214b1f8ca329326cda
+Deleted: sha256:419f8948c50c723f2a5ac74428af3d804b5d0079d6df8f7f827663cf10cbc366
+Deleted: sha256:1030aac4f1a8096ed58d3d4a2df55dd1b1b27d919ad156d97ad1f68081d0051a
+Deleted: sha256:7d90b49d96c3036539ef144ecc27c01de03902d8ea166a0f7b77d11d3779c4bd
+Deleted: sha256:551acb210764654af31b6cd51adaa74edc9a202587c3395fe0e9f95a2e097f8b
+Deleted: sha256:3c530958db4c75c6fb409f339367aaf9a1e163c84718c035d4b09bebc83f43e7
+Deleted: sha256:8cbe4b54fa88d8fc0198ea0cc3a5432aea41573e6a0ee26eca8c79f9fbfa40e3
+```
+
+
+
+Reference:
+
+*   ![favicon-docs.docker.com](https://www.google.com/s2/favicons?domain=docs.docker.com)[Image-building best practices](https://docs.docker.com/get-started/09_image_best/)
+*   ![favicon-docs.docker.com](https://www.google.com/s2/favicons?domain=docs.docker.com)[Layer Caching](https://docs.docker.com/build/cache/)
+*   ![favicon-docs.docker.com](https://www.google.com/s2/favicons?domain=docs.docker.com)[Image Layering](https://docs.docker.com/storage/storagedriver/)
+*   ![favicon-docs.docker.com](https://www.google.com/s2/favicons?domain=docs.docker.com)[Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
+*   ![favicon-docs.docker.com](https://www.google.com/s2/favicons?domain=docs.docker.com)[docker tag](https://docs.docker.com/engine/reference/commandline/tag/)
+*   ![favicon-docs.docker.com](https://www.google.com/s2/favicons?domain=docs.docker.com)[docker images](https://docs.docker.com/engine/reference/commandline/images/)
+*   ![favicon-docs.docker.com](https://www.google.com/s2/favicons?domain=docs.docker.com)[docker push](https://docs.docker.com/engine/reference/commandline/push/)
+*   ![favicon-docs.docker.com](https://www.google.com/s2/favicons?domain=docs.docker.com)[docker pull](https://docs.docker.com/engine/reference/commandline/pull/)
+*   ![favicon-docs.docker.com](https://www.google.com/s2/favicons?domain=docs.docker.com)[docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)

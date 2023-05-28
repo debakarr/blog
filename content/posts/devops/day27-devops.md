@@ -1,11 +1,11 @@
 ---
-title: "Day27 Devops"
+title: "Day 27: Docker - Installation and configuration"
 date: 2023-05-15T12:20:43+05:30
-draft: true
+draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
-tags: ["DevOps", "CI/CD", "IaC", "Terraform", "Alternatives"]
-categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "IaC", "Terraform", "Pulumi"]
+tags: ["DevOps", "CI/CD", "Containerization", "Docker"]
+categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "Containerization", "Docker"]
 ---
 
 {{< admonition type=info title="Content" open=false >}}
@@ -48,12 +48,12 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 *   [Day 22: Terraform - Installation and configuration](/posts/devops/day22-devops)
 *   [Day 23: Terraform - Writing and applying configuration files](/posts/devops/day23-devops)
 *   [Day 24: Terraform - Modules and best practices](/posts/devops/day24-devops)
-*   **[Day 25: CloudFormation (AWS) - Overview and comparison](/posts/devops/day25-devops)**
+*   [Day 25: CloudFormation (AWS) - Overview and comparison](/posts/devops/day25-devops)
 
 **Part 6: Containerization**
 
-*   Day 26: Introduction to containerization
-*   Day 27: Docker - Installation and configuration
+*   [Day 26: Introduction to containerization](/posts/devops/day26-devops)
+*   **[Day 27: Docker - Installation and configuration](/posts/devops/day27-devops)**
 *   Day 28: Docker - Building and managing images
 *   Day 29: Docker - Running and managing containers
 *   Day 30: Docker Compose and best practices
@@ -91,3 +91,12 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 *   Day 50: Cloud security and compliance
 
 {{< /admonition >}}
+
+Installation guidelines for docker are available in the [official website documentation](https://docs.docker.com/engine/install/).
+
+Once docker is installed we can check the version of docker using the following command:
+
+```console
+$ docker --version
+Docker version 23.0.5, build bc4487a
+```
