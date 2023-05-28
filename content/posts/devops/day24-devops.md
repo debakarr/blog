@@ -1,10 +1,10 @@
 ---
-title: "Day 22: Terraform - Installation and configuration"
-date: 2023-05-10T11:02:37+05:30
+title: "Day 24: Terraform - Modules and best practices"
+date: 2023-05-12T11:41:21+05:30
 draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
-tags: ["DevOps", "Tutorial", "IaC", "Terraform"]
+tags: ["DevOps", "CI/CD", "IaC", "Terraform", "Best Practice"]
 categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "IaC", "Terraform"]
 ---
 
@@ -45,9 +45,9 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 **Part 5: Infrastructure as Code**
 
 *   [Day 21: Introduction to Infrastructure as Code (IaC)](/posts/devops/day21-devops)
-*   **[Day 22: Terraform - Installation and configuration](/posts/devops/day22-devops)**
-*   Day 23: Terraform - Writing and applying configuration files
-*   Day 24: Terraform - Modules and best practices
+*   [Day 22: Terraform - Installation and configuration](/posts/devops/day22-devops)
+*   [Day 23: Terraform - Writing and applying configuration files](/posts/devops/day23-devops)
+*   **[Day 24: Terraform - Modules and best practices](/posts/devops/day24-devops)**
 *   Day 25: CloudFormation (AWS) - Overview and comparison
 
 **Part 6: Containerization**
@@ -92,4 +92,12 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 
 {{< /admonition >}}
 
-Go through the official documentation for the [Installation Process](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
+Some articles to get an idea of what `Terraform modules` are:
+
+*   ![favicon-developer.hashicorp.com](https://www.google.com/s2/favicons?domain=developer.hashicorp.com)[Modules Overview](https://developer.hashicorp.com/terraform/tutorials/modules/module)
+*   ![favicon-developer.hashicorp.com](https://www.google.com/s2/favicons?domain=developer.hashicorp.com)[Module Creation](https://developer.hashicorp.com/terraform/tutorials/modules/pattern-module-creation)
+*   ![favicon-www.env0.com](https://www.google.com/s2/favicons?domain=www.env0.com)[Introduction to Terraform Modules](https://www.env0.com/blog/terraform-modules)
+
+Some articles with the best practices to use `Terraform` are:
+*   ![favicon-cloud.google.com](https://www.google.com/s2/favicons?domain=cloud.google.com)[Best practices for using Terraform](https://cloud.google.com/docs/terraform/best-practices-for-terraform)
+*   ![favicon-www.contino.io](https://www.google.com/s2/favicons?domain=www.contino.io)[20 Terraform Best Practices to Create Clean and Reusable Code](https://www.contino.io/insights/terraform-best-practices)

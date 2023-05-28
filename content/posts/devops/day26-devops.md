@@ -1,11 +1,11 @@
 ---
-title: "Day 22: Terraform - Installation and configuration"
-date: 2023-05-10T11:02:37+05:30
+title: "Day 26: Introduction to containerization"
+date: 2023-05-14T12:20:40+05:30
 draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
-tags: ["DevOps", "Tutorial", "IaC", "Terraform"]
-categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "IaC", "Terraform"]
+tags: ["DevOps", "CI/CD", "Containerization", "Docker"]
+categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "Containerization", "Docker"]
 ---
 
 {{< admonition type=info title="Content" open=false >}}
@@ -45,14 +45,14 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 **Part 5: Infrastructure as Code**
 
 *   [Day 21: Introduction to Infrastructure as Code (IaC)](/posts/devops/day21-devops)
-*   **[Day 22: Terraform - Installation and configuration](/posts/devops/day22-devops)**
-*   Day 23: Terraform - Writing and applying configuration files
-*   Day 24: Terraform - Modules and best practices
-*   Day 25: CloudFormation (AWS) - Overview and comparison
+*   [Day 22: Terraform - Installation and configuration](/posts/devops/day22-devops)
+*   [Day 23: Terraform - Writing and applying configuration files](/posts/devops/day23-devops)
+*   [Day 24: Terraform - Modules and best practices](/posts/devops/day24-devops)
+*   [Day 25: CloudFormation (AWS) - Overview and comparison](/posts/devops/day25-devops)
 
 **Part 6: Containerization**
 
-*   Day 26: Introduction to containerization
+*   **[Day 26: Introduction to containerization](/posts/devops/day26-devops)**
 *   Day 27: Docker - Installation and configuration
 *   Day 28: Docker - Building and managing images
 *   Day 29: Docker - Running and managing containers
@@ -92,4 +92,24 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 
 {{< /admonition >}}
 
-Go through the official documentation for the [Installation Process](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
+One of the best video I have watched for containerization:
+
+{{< youtube J0NuOlA2xDc >}}
+
+---
+
+Another one which you would see everyone recommend in reddit:
+
+{{< youtube aLipr7tTuA4 >}}
+
+---
+
+Some other explainations which are worth reading:
+
+*   ![favicon-www.reddit.com](https://www.google.com/s2/favicons?domain=www.reddit.com)[ELI5: What are containerized applications?](https://www.reddit.com/r/explainlikeimfive/comments/6pleyv/eli5_what_are_containerized_applications/)
+
+---
+
+A much advance introduction is given here:
+
+*   ![favicon-medium.com](https://www.google.com/s2/favicons?domain=medium.com)[The Missing Introduction To Containerization](https://medium.com/devopslinks/the-missing-introduction-to-containerization-de1fbb73efc5/)

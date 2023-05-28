@@ -1,11 +1,11 @@
 ---
-title: "Day 22: Terraform - Installation and configuration"
-date: 2023-05-10T11:02:37+05:30
-draft: false
+title: "Day28 Devops"
+date: 2023-05-16T12:20:46+05:30
+draft: true
 author: Debakar Roy
 authorLink: https://github.com/debakarr
-tags: ["DevOps", "Tutorial", "IaC", "Terraform"]
-categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "IaC", "Terraform"]
+tags: ["DevOps", "CI/CD", "IaC", "Terraform", "Alternatives"]
+categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "IaC", "Terraform", "Pulumi"]
 ---
 
 {{< admonition type=info title="Content" open=false >}}
@@ -45,10 +45,10 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 **Part 5: Infrastructure as Code**
 
 *   [Day 21: Introduction to Infrastructure as Code (IaC)](/posts/devops/day21-devops)
-*   **[Day 22: Terraform - Installation and configuration](/posts/devops/day22-devops)**
-*   Day 23: Terraform - Writing and applying configuration files
-*   Day 24: Terraform - Modules and best practices
-*   Day 25: CloudFormation (AWS) - Overview and comparison
+*   [Day 22: Terraform - Installation and configuration](/posts/devops/day22-devops)
+*   [Day 23: Terraform - Writing and applying configuration files](/posts/devops/day23-devops)
+*   [Day 24: Terraform - Modules and best practices](/posts/devops/day24-devops)
+*   **[Day 25: CloudFormation (AWS) - Overview and comparison](/posts/devops/day25-devops)**
 
 **Part 6: Containerization**
 
@@ -91,5 +91,3 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 *   Day 50: Cloud security and compliance
 
 {{< /admonition >}}
-
-Go through the official documentation for the [Installation Process](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).

@@ -1,11 +1,11 @@
 ---
-title: "Day 22: Terraform - Installation and configuration"
-date: 2023-05-10T11:02:37+05:30
+title: "Day 25: CloudFormation (AWS) - Overview and comparison"
+date: 2023-05-13T12:12:43+05:30
 draft: false
 author: Debakar Roy
 authorLink: https://github.com/debakarr
-tags: ["DevOps", "Tutorial", "IaC", "Terraform"]
-categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "IaC", "Terraform"]
+tags: ["DevOps", "CI/CD", "IaC", "Terraform", "Alternatives"]
+categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "IaC", "Terraform", "Pulumi"]
 ---
 
 {{< admonition type=info title="Content" open=false >}}
@@ -45,10 +45,10 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 **Part 5: Infrastructure as Code**
 
 *   [Day 21: Introduction to Infrastructure as Code (IaC)](/posts/devops/day21-devops)
-*   **[Day 22: Terraform - Installation and configuration](/posts/devops/day22-devops)**
-*   Day 23: Terraform - Writing and applying configuration files
-*   Day 24: Terraform - Modules and best practices
-*   Day 25: CloudFormation (AWS) - Overview and comparison
+*   [Day 22: Terraform - Installation and configuration](/posts/devops/day22-devops)
+*   [Day 23: Terraform - Writing and applying configuration files](/posts/devops/day23-devops)
+*   [Day 24: Terraform - Modules and best practices](/posts/devops/day24-devops)
+*   **[Day 25: CloudFormation (AWS) - Overview and comparison](/posts/devops/day25-devops)**
 
 **Part 6: Containerization**
 
@@ -92,4 +92,13 @@ categories: ["DevOps", "Software Development", "Automation", "Infrastructure", "
 
 {{< /admonition >}}
 
-Go through the official documentation for the [Installation Process](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
+Some articles which shed light in **CloudFormation vs Terraform**:
+
+*   ![favicon-spacelift.io](https://www.google.com/s2/favicons?domain=spacelift.io)[Terraform vs. AWS CloudFormation : The Ultimate Comparison](https://spacelift.io/blog/terraform-vs-cloudformation)
+*   ![favicon-www.cncf.io](https://www.google.com/s2/favicons?domain=www.cncf.io)[Terraform vs. AWS CloudFormation : The Ultimate Comparison](https://www.cncf.io/blog/2021/04/06/cloudformation-vs-terraform-which-is-better/)
+
+---
+
+- **[Pulumi](https://www.pulumi.com/)** is another alternative of Terraform.
+- **[Azure Reource Manager](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)** is another alternative specializing in Azure solutions.
+- **[Google Cloud Deployment Manager](https://cloud.google.com/deployment-manager/docs)** is yet another alternative specializing in GCP solutions.
